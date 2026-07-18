@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Book an Appointment — CarePulse Clinic</title>
+  <meta name="description" content="Book an appointment at CarePulse Clinic in Dhanbad, or reach our front desk by phone, email, or in person." />
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="contact">
+
+  <div data-include="partials/header.html"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <a href="index.html" class="breadcrumb">← Back home</a>
+        <p class="eyebrow" style="margin-top:1.4rem;">Contact</p>
+        <h1 style="max-width:16ch;">Let's get you on the calendar.</h1>
+        <p class="hero-lede">Fill in the form and our front desk will call to confirm your slot — usually within the hour during clinic hours.</p>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container hero-grid" style="align-items:start;">
+
+        <div class="card" style="padding:2.5rem;">
+          <h3 style="margin-bottom:1.2rem;">Book an appointment</h3>
+          <form id="appointment-form" novalidate>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" required autocomplete="name" />
+              </div>
+              <div class="form-field">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" pattern="[0-9+\-\s]{7,15}" />
+              </div>
+              <div class="form-field">
+                <label for="email">Email (optional)</label>
+                <input type="email" id="email" name="email" autocomplete="email" />
+              </div>
+              <div class="form-field">
+                <label for="department">Department</label>
+                <select id="department" name="department" required>
+                  <option value="">Select one</option>
+                  <option value="Cardiology">Cardiology</option>
+                  <option value="Orthopedics">Orthopedics</option>
+                  <option value="Pediatrics">Pediatrics</option>
+                  <option value="Dental Care">Dental Care</option>
+                  <option value="Ophthalmology">Ophthalmology</option>
+                  <option value="General Medicine">General Medicine</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="date">Preferred date</label>
+                <input type="date" id="date" name="date" required />
+              </div>
+              <div class="form-field">
+                <label for="time">Preferred time</label>
+                <select id="time" name="time" required>
+                  <option value="">Select one</option>
+                  <option value="Morning (9am–12pm)">Morning (9am–12pm)</option>
+                  <option value="Afternoon (12pm–4pm)">Afternoon (12pm–4pm)</option>
+                  <option value="Evening (4pm–8pm)">Evening (4pm–8pm)</option>
+                </select>
+              </div>
+              <div class="form-field full">
+                <label for="message">Tell us what's going on (optional)</label>
+                <textarea id="message" name="message" placeholder="Symptoms, previous visits, or anything the doctor should know beforehand."></textarea>
+              </div>
+            </div>
+
+            <p class="form-note">Submitting opens your email app with these details already filled in, ready to send to our front desk. For medical emergencies, please call +91 98765 43210 directly instead of booking online.</p>
+
+            <div style="margin-top:1.6rem;">
+              <button type="submit" class="btn btn-primary">Request appointment</button>
+            </div>
+
+            <div id="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <div>
+          <div class="card" style="margin-bottom:1.5rem;">
+            <h4>Visit us</h4>
+            <p style="margin-bottom:0.3em;">2nd Floor, Health Tower Rd<br />Dhanbad, Jharkhand 826001</p>
+            <p style="font-family:var(--font-mono); font-size:0.85rem; color:var(--ink-soft);">Mon–Sat · 9:00 AM – 8:00 PM<br />Sun · 9:00 AM – 1:00 PM (Emergency only)</p>
+          </div>
+          <div class="card" style="margin-bottom:1.5rem;">
+            <h4>Reach the front desk</h4>
+            <p style="margin-bottom:0.3em;"><a href="tel:+911234567890" style="text-decoration:none; color:var(--teal);">+91 12345 67890</a></p>
+            <p style="margin-bottom:0;"><a href="mailto:hello@carepulseclinic.example" style="text-decoration:none; color:var(--teal);">hello@carepulseclinic.example</a></p>
+          </div>
+          <div class="map-wrap">
+            <iframe
+              title="CarePulse Clinic location"
+              src="https://maps.google.com/maps?q=Dhanbad%2C%20Jharkhand&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
